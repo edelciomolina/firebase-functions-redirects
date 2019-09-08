@@ -1,1 +1,2 @@
-# firebase-functions-router
+# 🌌 FFR
+## **Firebase** Functions Redirects
