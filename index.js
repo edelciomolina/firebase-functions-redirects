@@ -60,7 +60,10 @@ const runExpress = async () => {
 const getFirebaseJson = async suffix => {
   try {
     const readFile = util.promisify(fs.readFile);
-    const contents = await readFile(`firebase.json${suffix || ""}`, "utf8");
+    const contents = await readFile(
+      `${process.cwd()}\\firebase.json${suffix || ""}`,
+      "utf8"
+    );
     return !!contents ? JSON.parse(contents) : {};
   } catch (error) {
     return {};
@@ -70,14 +73,14 @@ const getFirebaseJson = async suffix => {
 const saveFirebaseJson = async (config, suffix) => {
   const writeFile = util.promisify(fs.writeFile);
   return await writeFile(
-    `firebase.json${suffix || ""}`,
+    `${process.cwd()}\\firebase.json${suffix || ""}`,
     JSON.stringify(config, null, 2)
   );
 };
 
 const deleteFirebaseJsonBackup = async () => {
   const unlink = util.promisify(fs.unlink);
-  return await unlink("firebase.json.bkp");
+  return await unlink(`${process.cwd()}\\firebase.json.bkp`);
 };
 
 const backupFirebaseJson = async () => {
