@@ -102,7 +102,7 @@ const replaceFirebaseJson = async () => {
 
       const deleteByValue = (obj, val) => {
         for (let index = 0; index < obj.length; index++) {
-          const element = obj[index];
+          const element = obj[index] || {};
           if (element.source == val) {
             delete obj[index];
           }
