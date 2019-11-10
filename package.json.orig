@@ -6,8 +6,15 @@
   "scripts": {
     "test": "node test/test.js",
     "release": "np minor ci"
+<<<<<<< HEAD
   },
   "np": {
+    "yolo": true
+=======
+>>>>>>> 1d929000bb6232dbfef8aaa414dbe35a12169024
+  },
+  "np": {
+    "yarn": true,
     "yolo": true
 	},
   "repository": {
@@ -21,8 +28,13 @@
     "node-run-cmd": "^1.0.1",
     "request": "^2.88.0"
   },
+<<<<<<< HEAD
   "devDependencies": {
     "np": "*"
+=======
+	"devDependencies": {
+		"np": "*"
+>>>>>>> 1d929000bb6232dbfef8aaa414dbe35a12169024
   },
   "bugs": {
     "url": "https://github.com/edelciomolina/firebase-functions-redirects/issues"
