@@ -7,10 +7,6 @@
     "test": "node test/test.js",
     "release": "np minor ci"
   },
-  "np": {
-    "yolo": true,
-    "contents": "dist"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/edelciomolina/firebase-functions-redirects.git"
