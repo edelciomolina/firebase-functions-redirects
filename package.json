@@ -4,7 +4,11 @@
   "description": "",
   "main": "./index.js",
   "scripts": {
-    "test": "node test/test.js" 
+    "test": "node test/test.js",
+    "release": "np minor ci"
+  },
+  "np": {
+    "yolo": true
   },
   "repository": {
     "type": "git",
@@ -16,6 +20,9 @@
     "express": "^4.17.1",
     "node-run-cmd": "^1.0.1",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "np": "*"
   },
   "bugs": {
     "url": "https://github.com/edelciomolina/firebase-functions-redirects/issues"
