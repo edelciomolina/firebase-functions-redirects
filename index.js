@@ -46,7 +46,7 @@ const serveFirebase = async () => {
 const runExpress = async () => {
   const app = express();
   const config = await getFirebaseJson();
-  const message = `>>> Functions Running at ${serverPort} <<<`;
+  const message = `---------------------------------\n>>> Functions Running at ${serverPort} <<<\n---------------------------------`;
   try {
     await config.hosting.rewrites.forEach(item => {
       item.function && app.get(item.source, services[item.function]);
@@ -133,12 +133,12 @@ const run = async config => {
   services = config.services || {};
   serverPort = config.port || serverPort;
 
-  await runExpress();
   await backupFirebaseJson();
   await replaceFirebaseJson();
   await serveFirebase();
   await recoverFirebaseJson();
   await deleteFirebaseJsonBackup();
+  await runExpress();
   return { running: true };
 };
 
