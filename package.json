@@ -21,9 +21,6 @@
     "node-run-cmd": "^1.0.1",
     "request": "^2.88.0"
   },
-  "devDependencies": {
-    "np": "*"
-  },
   "bugs": {
     "url": "https://github.com/edelciomolina/firebase-functions-redirects/issues"
   },
